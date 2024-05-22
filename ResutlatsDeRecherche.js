@@ -20,11 +20,9 @@ export default class ResultatsDeRecherche extends Component<Props> {
             onPressItem={this._itemAppuye}
         />
     );
-
     _itemAppuye = (index) => {
         console.log('Ligne appuyée : ' + index);
     };
-
     render() {
         console.log(this.props.route.params);
         const  {listings}  = this.props.route.params;
@@ -38,7 +36,6 @@ export default class ResultatsDeRecherche extends Component<Props> {
         );
     }
 }
-
 class ListItem extends React.PureComponent {
     _itemAppuye = () => {
         this.props.onPressItem(this.props.index);
@@ -66,7 +63,6 @@ class ListItem extends React.PureComponent {
         );
     }
 }
-
 const styles = StyleSheet.create({
     conteneurTexte: {
         flex: 1,
